@@ -27,7 +27,9 @@ for (let i = 0; i < numbers.length; i++) {
 
 
 // Q: Could you come up with a solution that has a better time complexity? If so, what is that time complexity?
-// ANSWER:
+answer = numbers[3];
+// ANSWER: O(1)
+
 
 
 // 2) -------------------------------------------------------
@@ -146,8 +148,15 @@ function squareEveryDigit(number) {
     parsed = parseInt(a[i]);
     str += parsed*parsed
   }
-  console.log(str);
+  return str;
 }
+
+//or
+
+function squareEveryDigit2(number){
+  return +Array.from(number.toString(), (digit) => { digit * digit }).join("")
+}
+console.log(squareEveryDigit(948))
 
 //O(n)
 
